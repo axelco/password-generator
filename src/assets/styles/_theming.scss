@@ -1,0 +1,40 @@
+$primary :#6610f2;
+$dark : #38383a;
+// $secondary : #FFF500;
+$success : #09e1c0;
+$danger : #FF3C38;
+$warning : #FFE440;
+$white : #ffffff;
+
+$font-weight-base : 300;
+$font-family-base : 'Poppins', sans-serif ;
+
+$display-font-weight: 700 !default;
+$display-line-height : 1.7;
+
+$grid-gutter-width: 1.5rem !default;
+$container-padding-x: $grid-gutter-width *2 !default;
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer,
+  2: $spacer * 1.5,
+  3: $spacer * 2,
+  4: $spacer * 3,
+  5: $spacer * 5,
+) !default;
+
+
+// Offcanvas and modal ovverride
+$offcanvas-border-width: 0 !default;
+$offcanvas-horizontal-width:        600px !default;
+$modal-backdrop-opacity: .8 !default;
+
+// Navbar
+$topnav-height : 70px;
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";

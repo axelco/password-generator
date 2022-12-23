@@ -1,5 +1,6 @@
 import {  useState } from 'react';
 import InputStep from './components/InputStep/InputStep';
+import ResultStep from './components/resultStep/ResultStep';
 import SentenceMaker from './services/SentenceMaker.service';
 import PasswordChecker from './services/PasswordChecker.service';
 
@@ -52,18 +53,12 @@ const App = () => {
   // If password is valid we show result
   // Elese we show InPutStep
   const view = viewResult ? 
-
-    <div>
-        <p>password : {password}</p>
-        <p>Original sentence : {sentence}</p>
-        <button 
-          onClick={reset} 
-          className="btn btn-primary" 
-          >Generate new password</button>        
-    </div>
-
+    <ResultStep
+      sentence={sentence}
+      password={password}
+      onClickReset={reset}
+      />
     : 
-
     <InputStep 
       sentence={sentence}
       errors={errors}
@@ -72,9 +67,28 @@ const App = () => {
       />    
 
     return (
-      <div className="container py-5">      
-        {view}
-      </div>
+      <>
+      <header id="site-header" className=' py-2'>
+        <div className="container text-center">
+          <p className='fs-2'>🔐</p>
+          <h1 className="display-4 mb-0">Password generator</h1>
+
+        </div>        
+      </header>
+      <div className="container py-2 py-lg-3">      
+        <div className='card p-2 p-lg-4 py-lg-5'>
+          {view}
+        </div>
+        
+      </div>    
+      <footer id="site-footer py-2" >
+        <div className='container text-center'>
+          Made with ❤ by Alexandre Rozec
+        </div>
+        
+      </footer>  
+      </>
+
     );
 }
 

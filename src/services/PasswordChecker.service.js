@@ -36,18 +36,22 @@ class PasswordChecker{
     }
 
     hasNumbers(){
+        // eslint-disable-next-line
         return /^(?=.*?[0-9])/.test(this.pw)
     }
 
     hasSymbols(){
+        // eslint-disable-next-line
         return /[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/]/.test(this.pw)
     }
 
     hasUppercase(){
+        // eslint-disable-next-line
         return /^(?=.*?[A-Z])/.test(this.pw)
     }
 
     hasLowercase(){
+        // eslint-disable-next-line
         return /^(?=.*?[a-z])/.test(this.pw)     
     }
     
